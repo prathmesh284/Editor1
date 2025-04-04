@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import RoomCreator from "./RoomCreator";
+import "./App.css"; // Import global styles
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <aside className="sidebar">
+        <h1 className="logo">🚀 CodeSync</h1>
+        <p className="sidebar-text">Real-time Collaborative Coding</p>
+      </aside>
+      <main className="main-content">
+        <RoomCreator />
+      </main>
     </div>
   );
-}
+};
 
 export default App;

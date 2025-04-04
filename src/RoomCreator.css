@@ -1,0 +1,61 @@
+/* Room Creator */
+.room-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 80vw;
+  }
+  
+  .room-card {
+    background: #222;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    max-width: 1400px;
+    width: 100vw;
+    color: white;
+  }
+  
+  .room-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #42a5f5;
+  }
+  
+  .room-btn {
+    background: #42a5f5;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+    transition: 0.3s;
+  }
+  
+  .room-btn:hover {
+    background: #1e88e5;
+  }
+  
+  .room-separator {
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #999;
+  }
+  
+  .room-input {
+    padding: 12px;
+    width: calc(100% - 24px);
+    border: 1px solid #555;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #333;
+    color: white;
+  }
+  
