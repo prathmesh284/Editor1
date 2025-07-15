@@ -1,0 +1,222 @@
+/* Editor Container */
+.editor-container {
+  width: 98%;
+  max-width: 1400px;
+  margin: 10px auto;
+  padding: 0px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 100vh;
+  scrollbar-width: none;
+}
+
+/* Room ID Info */
+.room-info {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #42a5f5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Editor Wrapper */
+.editor-wrapper {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 500px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* Run Button */
+.run-btn {
+  position: absolute;
+  top: 3px;
+  right: 20px;
+  background: #42a5f5;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.run-btn:hover {
+  background: #1e88e5;
+}
+
+/* Output Box */
+.output-box.overlay {
+  position: fixed;
+  bottom: -10px;
+  right: 30px;
+  width: 76vw;
+  max-height: 60vh; /* ⬆️ Increased from 100vh to 60vh */
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 20px;  
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.output-box h4 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.output-box pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: #2d2d2d;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-family: monospace;
+  overflow-x: auto;
+  height: 20vh;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Close Button for Output */
+.close-btn {
+  background: #ff5555;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+  background: #cc4444;
+}
+
+/* Output Header */
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333;
+}
+
+/* Suggestion Box */
+.suggestion-box {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  max-height: 200px;
+  min-height: 100px;
+  width: 97%;
+  overflow-x: auto;
+  position: relative;
+  bottom: 0px;
+}
+
+.suggestion-box h4 {
+  margin: 0 0 0 0;
+}
+
+.suggestion-box pre {
+  background-color: #2d2d2d;
+  padding: 0.5rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.save-btn{
+  height: 35px;
+  position: absolute;
+  top: -7px;
+  right: 310px;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Apply Suggestion Button */
+.apply-btn {
+  position: absolute;
+  top: -7px;
+  right: 110px;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.apply-suggestion-btn {
+  position: absolute;
+  top: 0px;
+  right: 50px;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.apply-btn:hover {
+  background-color: #0284c7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .editor-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .editor-wrapper {
+    height: 60vh;
+  }
+
+  .run-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .output-box.overlay,
+  .suggestion-box {
+    max-height: 80vh;
+  }
+}
